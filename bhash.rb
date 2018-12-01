@@ -1,7 +1,7 @@
 # Bidirectional hash? Probably not the correct term but something that
 # need every now and then
 
-class BHash
+class BidirectionalHash
   def initialize(h = {})
     @data = {}
     h.each do |k, v|
