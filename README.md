@@ -12,7 +12,15 @@ It might seem like a very strange requirement but this happens quite a bit. Coul
 
 ## ParseTime
 
-Converts a human expression of time into seconds, there is probably something that does this already
+Converts a human expression of time into seconds, there is probably something that does this already but there you go. Understands:
+
+* s, sec, second, secs, seconds
+* m, min, mins, minute, minutes
+* h, hour, hours
+* d, day, days
+* w, week, weeks
+
+Doesn't go beyond weeks because how many days are there in a month anyhow? It assumes that the leap second is probably not going to be an issue for you. Some examples:
 
 * 1 day => 86_400
 * 5 minutes => 300
