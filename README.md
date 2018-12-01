@@ -24,6 +24,6 @@ Doesn't go beyond weeks because how many days are there in a month anyhow? It as
 
 * 1 day => 86_400
 * 5 minutes => 300
-* 1 day and 5 minutes => 867_00
+* 1 day and 5 minutes => 86_700
 * 1d1s => 86_401
 * 5m1d3s => 86_703
