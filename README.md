@@ -27,3 +27,11 @@ Doesn't go beyond weeks because how many days are there in a month anyhow? It as
 * 1 day and 5 minutes => 86_700
 * 1d1s => 86_401
 * 5m1d3s => 86_703
+
+## Normalise netmask
+
+When you add a mask to an ip address such as 1.1.1.1/24 you are supposed to set the bits outside the mask to 0 in the dotted quad but not all the tools do this. But plenty will complain if you don't do it yourself
+
+So this does just that in possibly the least efficient way possible
+
+This 1.1.1.1/24 should become 1.1.1.0/24 and 192.168.3.10/24 becomes 192.168.3.0/24
