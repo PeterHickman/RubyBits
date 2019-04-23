@@ -35,3 +35,7 @@ When you add a mask to an ip address such as 1.1.1.1/24 you are supposed to set 
 So this does just that in possibly the least efficient way possible
 
 This 1.1.1.1/24 should become 1.1.1.0/24 and 192.168.3.10/24 becomes 192.168.3.0/24
+
+## Config file
+
+Parse a YAML config file and allow access to its contents through the `get` method. Will update the configuration data if the underlying file is changed
