@@ -25,15 +25,14 @@ class ConfigFile
 
     @data = {}
 
-    @mtime = File.mtime(@filename)
-
-    loadfile
+    @mtime = nil
   end
 
   def get(path)
     new_mtime = File.mtime(@filename)
     if new_mtime != @mtime
-      loadfile
+      yaml = open(@filename).read
+      @data = YAML.load(yaml)
       @mtime = new_mtime
     end
 
@@ -46,13 +45,6 @@ class ConfigFile
     end
 
     x
-  end
-
-  private
-
-  def loadfile
-    yaml = open(@filename).read
-    @data = YAML.load(yaml)
   end
 end
 
